@@ -1,0 +1,971 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body {
+    overflow-x: hidden;
+}
+/* Header Style Sheet */
+
+header {
+    height: 13vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding: 0px 80px; */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+header img {
+    width: 200px;
+    /* border: 1px solid blue; */
+}
+
+header .right {
+    display: flex;
+    /* border: 1px solid blue; */
+    width: 800px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header div .nav {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+    /* border:1px solid blue; */
+}
+
+header div .nav li {
+    list-style: none;
+    position: relative;
+
+}
+
+
+header div .nav li a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-weight: 600;
+    transition: 0.6s;
+    color: purple;
+
+}
+
+header div .nav li a:hover {
+    color: rgb(201, 111, 0);
+    transition: 0.6s;
+
+}
+
+.activePage::after {
+    content: "";
+    background-color: rgb(195, 84, 0);
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    transition: 0.6s;
+   }
+
+header div .nav li a:hover::after {
+    content: "";
+    background-color: rgb(195, 84, 0);
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    transition: 0.6s;
+
+}
+
+header .right .searchContainer {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+header .right .searchContainer #search {
+    height: 39px;
+    width: 202px;
+    border-top-left-radius: 29px;
+    transition: 1s;
+
+    /* border-radius: 29px; */
+    outline: none;
+    border: 1px solid purple;
+    text-align: center;
+    font-size: 14px;
+    color: purple;
+}
+
+header .right .searchContainer #search:hover {
+    background-color: purple;
+    color: white;
+    border: 1px solid white;
+}
+
+header .right .searchContainer #searchBtn {
+    background-color: purple;
+    color: white;
+    border: 1px solid white;
+    padding: 12px;
+    border-bottom-right-radius: 20px;
+    transition: 1s;
+cursor: pointer;
+}
+
+header .right .searchContainer #searchBtn:hover {
+    color: purple;
+    border: 1px solid purple;
+    background-color: #fff;
+}
+
+
+/* Image Slider StyleSheet */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+main .container {
+    height: 70vh;
+   
+    /* background:linear-gradient(rgba(140, 0, 0, 0.7),rgba(143, 0, 141, 0.7)), rgb(255, 200, 200); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+main .container img {
+    height: 55vh;
+    width: 70vw;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(55, 4, 139, 0.6);
+
+}
+
+
+main .container .row {
+    /* background-color: yellow; */
+    height: 20px;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main .container .row .round {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(243, 177, 177);
+    border-radius: 50%;
+    transition: 0.6S;
+}
+
+main .container .row .round:hover {
+    background-color: purple;
+}
+
+main .advHeight {
+    height: 50vh;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .advHeight .containerInfo {
+    /* border: 1px solid blue; */
+    height: 40vh;
+    width: 90vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 40px;
+}
+
+main .advHeight .containerInfo span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main .advHeight .containerInfo span h1 {
+    margin-bottom: 8px;
+    color: rgb(87, 0, 87);
+}
+
+main .advHeight .containerInfo span h6{
+    color: olive;
+}
+main .advHeight .containerInfo p{
+    margin-top: -30px;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgb(123, 0, 0);
+}
+
+main .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid blue; */
+    height: 60vh;
+
+}
+main .top h1{
+color: purple;
+letter-spacing: 1px;
+align-self: flex-start;
+margin-left: 120px;
+transition: 0.6s;
+
+}
+
+main .top h1:hover{
+    color: red;
+}
+main .top .topRow {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+main .top .topRow .box{
+    height: 200px;
+    width: 200px;
+    /* background-color: yellow; */
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(91, 23, 199, 0.6);
+    transition: 0.5s;
+}
+
+main .top .topRow .box:hover{
+    box-shadow: 5px 5px 10px rgba(10, 1, 24, 0.6);
+}
+
+main .top .topRow .box img{
+    height: 150px;
+    width: 150px;
+}
+
+main .top .topRow .box:nth-child(1) img{
+    height: 150px;
+    width: 180px;
+    
+}
+
+main .top .topRow .box:nth-child(2) img{
+    height: 140px;
+    width: 120px;
+    
+}
+
+main .top .topRow .box h4 {
+    color: red;
+}
+
+main .advertisement {
+    /* background-color: yellow; */
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+main .advertisement video {
+    height: 60vh;
+    width: 1000px;
+    position: absolute;
+    z-index: 1;
+}
+
+main .advertisement .temp {
+    background-color: rgba(11, 1, 1, 0.9);
+    height: 60vh;
+    width: 640px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px rgb(84, 84, 201);
+}
+
+main .advertisement .temp:hover {
+    box-shadow: 5px 5px 10px rgb(46, 249, 35);
+
+}
+
+
+main .advertisement .temp p{
+    color: white;
+    letter-spacing: 2px;
+font-size: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+main .info {
+   height: 1500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main .info .boxInfo {
+    height: 350px;
+    width: 800px;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 5px 5px 10px rgb(84, 84, 201);
+border-radius: 30px;
+transition: 0.5s;
+}
+
+main .info .boxInfo:hover {
+    box-shadow: 5px 5px 10px rgb(0, 0, 107);
+
+}
+
+main .info .boxInfo .details {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    text-align: start;
+}
+
+main .info .boxInfo:nth-child(3) img {
+    border-radius: 30px;
+}
+
+main .info .boxInfo .details h1{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+main .info .boxInfo .details h1,p{
+    font-size: 15px;
+   
+}
+main .info .boxInfo  img {
+height: 270px;
+width: 400px;
+}
+
+/* Footer Style Sheet */
+footer {
+    background-color: purple;
+height: 40vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+footer .copyrightHeading {
+    font-size: 10px;
+    color: white;
+}
+.footerDiv {
+    height: 35vh;
+    background-color: purple;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.footerDiv .footerBoxes {
+    height: 30vh;
+    width: 200px;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footerDiv .footerBoxes h1 {
+    color: rgb(190, 255, 160);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.footerDiv .social a{
+    width: 200px;
+text-decoration: none;
+color: white;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+font-size: 10px;
+}
+
+.footerDiv .social a img {
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid yellow;
+
+}
+
+.footerDiv .aboutShop img{
+    height: 100px;
+    width: 100px;
+
+background-color: #fff;
+border-radius: 50%;
+    border: 2px solid yellow;
+}
+
+footer .aboutShop h4{
+font-size: 14px;
+color: rgb(190, 255, 160);
+letter-spacing: 1px;
+text-shadow: 2px 2px 5px purple;
+}
+
+.footerDiv .contactInfo img{
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid yellow;
+
+}
+
+.footerDiv .contactInfo div {
+    color: white;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+
+}
+
+.footerDiv .contactInfo .addressInfo {
+
+    font-size: 7px;
+    text-align: start;
+    line-height: 10px;
+
+}
+
+.footerDiv .contactInfo h1 {
+    margin-top: -4px;
+}
+
+
+.footerDiv .locationInfo {
+    height: 30vh;
+    width: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Shop Page Style  Sheet */
+
+main  .productList {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* height: 2000px; */
+    padding: 10px 0px;
+    max-height: 3500px;
+    min-height: 60vh;
+}
+
+main  .productList h5 {
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: rgb(94, 0, 176);
+}
+
+main  .productList .productContainer h1 {
+    letter-spacing: 2px;
+    color: rgb(169, 77, 255);
+}
+
+main  .productList .productContainer {
+    height: 30vh;
+    width: 60vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid  blue; */
+    box-shadow: 2px 2px 4px rgb(84, 84, 201);
+    border-radius: 10px;
+   transition: 0.7s;
+   margin: 20px 0px;
+   cursor: pointer;
+    
+}
+
+main  .productList .productContainer:hover {
+ 
+   background-color: rgb(237, 227, 255);
+
+}
+
+main  .productList .productContainer img {
+    height: 160px;
+  
+}
+
+main  .productList .productContainer:nth-child(5) img {
+    height: 180px;
+    width: 170px;
+
+}
+
+
+main .productList .productContainer  .productDetails {
+
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .productList .productContainer  .productDetails h1 {
+    font-size: 15px;
+}
+
+main .productList .productContainer  .productDetails ul {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-direction: column;
+}
+
+main .productList .productContainer  .productDetails ul li {
+    font-size: 10px;
+}
+
+main .productList .productContainer  .productDetails h2{
+    font-size: 17px;
+}
+
+/* Single Product Details */
+
+main .productBuy {
+    /* background-color: rgb(255, 255, 232); */
+    height: 400px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+main .productBuy .productPic .mainImg img{
+    background-color: rgb(218, 218, 218);
+    height: 250px;
+    width: 273px;
+    padding: 10px;
+}
+
+main .productBuy .productPic .smallImg img {
+    background-color: rgb(218, 218, 218);
+
+    padding: 5px;
+    height: 60px;
+    width: 60px;
+}
+
+main .productBuy .productAllDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 300px;
+    width: 500px;
+    /* border: 1px solid blue; */
+}
+
+main .productBuy .productAllDetails .productBuyInfo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 150px;
+}
+
+main .productBuy .productAllDetails .productBuyInfo h1 {
+    font-size: 17px;
+    color: rgb(84, 0, 84);
+}
+
+main .productBuy .productAllDetails .productBuyInfo h3 {
+    font-size: 20px;
+    color: rgb(84, 0, 84);
+}
+
+main .productBuy .productAllDetails .productBuyInfo select {
+ text-align: center;
+    color: rgb(84, 0, 84);
+    height: 30px;
+    width: 100px;
+}
+
+main .productBuy .productAllDetails .productBuyInfo input{
+    text-align: center;
+    height: 36px;
+    width: 40px;
+}
+
+main .productBuy .productAllDetails .productBuyInfo button {
+    height: 40px;
+    width: 100px;
+    margin-left: 10px;
+    background-color:purple;
+    color: white;
+    border: 1px solid  purple;
+    transition: 0.6s;
+}
+
+main .productBuy .productAllDetails .productBuyInfo button:hover {
+    color: purple;
+    border: 1px solid  purple;
+background-color: #fff;
+}
+
+main .productBuy .productAllDetails  .productBrandInfo {
+
+display: flex;
+justify-content: space-evenly;
+align-items: flex-start;
+flex-direction: column;
+height: 150px;
+line-height: 20px;
+
+}
+
+
+/* Blog Page Style Sheet */
+
+main .blogsContainer {
+    width: 100vw;
+    display: flex;
+    background-color: rgb(218, 255, 255);
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    max-height: 7000px;
+    padding: 20px 0px;
+}
+
+main .blogsContainer .blogBox {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px;
+    /* border: 1px solid blue; */
+    margin: 20px 0px;
+    height: 30vh;
+    width: 60vw;
+    box-shadow: 2px 2px 5px rgb(131, 172, 255);
+   border-top-left-radius: 40px;
+   border-bottom-right-radius: 40px;
+    transition: 0.7s;
+}
+
+main .blogsContainer .blogBox:hover {
+
+    box-shadow: 2px 2px 5px rgb(9, 91, 255);
+
+
+}
+
+main .blogsContainer .blogBox h3 {
+    font-weight: 100;
+    color: rgb(105, 185, 255);
+
+}
+
+main .blogsContainer .blogBox h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: purple;
+
+}
+
+main .blogsContainer .blogBox p {
+    font-weight: 100;
+    color: black;
+    font-weight: 500;
+font-size: 13px;
+line-height: 17px;
+
+}
+
+
+/* About Page Style Sheet */
+
+.mainAbout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+main .aboutContainer {
+    height: 70vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0px;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 60px;
+transition: 0.7s;
+  box-shadow: 2px 2px 7px purple;
+}
+
+main .aboutContainer:hover {
+  box-shadow: 2px 2px 7px rgb(30, 0, 30);
+
+}
+
+main .aboutContainer .logoPic {
+    height: 200px;
+    width: 200px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .aboutContainer .logoPic img {
+    height: 180px;
+    width: 180px;
+    background-color:rgb(255, 255, 255);
+    /* border: 1px solid rgba(56, 4, 139, 0.34); */
+    /* border-radius: 50%; */
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+
+    box-shadow: 2px 2px 5px rgb(194, 183, 255),-2px -2px 5px rgb(253, 206, 255);
+    transition: 0.6s;
+
+}
+
+main .aboutContainer .logoPic img:hover {
+    box-shadow: 2px 2px 5px rgb(183, 171, 255),-2px -2px 5px rgb(252, 177, 255);
+
+}
+
+
+main .aboutContainer h1 {
+    color: purple;
+}
+
+main .aboutContainer h6 {
+    color: orange;
+}
+
+main .aboutContainer .aboutInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 20vh;
+    text-align: center;
+   
+}
+
+main .aboutContainer .aboutInfo p {
+    font-size: 13px;
+    word-spacing: 2px;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+    color: rgb(137, 0, 0);
+}
+
+
+
+main .aboutContainer button {
+    height: 40px;
+    width: 150px;
+    margin-left: 10px;
+    background-color:purple;
+    color: white;
+    border: 1px solid  purple;
+    transition: 0.6s;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+main .aboutContainer button:hover {
+    color: purple;
+    border: 1px solid  purple;
+background-color: #fff;
+}
+
+
+
+/* Contact Page Style Sheet */
+
+main .contactContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 90vh;
+    background-color: aqua;
+    flex-wrap: wrap;
+   
+}
+
+main .contactContainer .contactUsInfo {
+    width: 40vw;
+    height: 50vh;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .contactContainer .contactUsInfo h1{
+font-size: 20px;
+color: purple;
+}
+
+main .contactContainer .contactUsInfo h2{
+    font-size:14px;
+    margin-top: -40px;
+    margin-bottom: 15px;
+    color: rgb(155, 137, 0);
+    }
+
+
+main .contactContainer .contactUsInfo  img{
+height: 200px;
+width: 200px;
+margin-top: -20px;
+
+
+
+}
+
+main .contactContainer .contactUsInfo p{
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+main .contactContainer form {
+    width: 40vw;
+    height: 75vh;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 10px;
+
+}
+
+main .contactContainer form label{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    /* margin-bottom: -15px; */
+    margin-left: 3px;
+    color: rgb(255, 62, 94);
+    }
+
+main .contactContainer form input{
+align-self: stretch;
+height: 5vh;
+border: none;
+outline: none;
+border-radius: 5px;
+padding: 2px;
+padding-left: 10px;
+}
+
+main .contactContainer form textarea{
+    align-self: stretch;
+    border: none;
+outline: none;
+border-radius: 5px;
+padding: 2px;
+padding-left: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+
+    }
+
+main .contactContainer form #sendMsgBtn {
+background-color: purple;
+height: 7vh;
+color: white;
+font-weight: 600;
+letter-spacing: 1px;
+border: 1px solid purple;
+transition: 0.7s;
+}
+
+main .contactContainer form #sendMsgBtn:hover {
+    background-color: white;
+    color: purple;
+border: 1px solid purple;
+
+
+}
+
+
+
+
